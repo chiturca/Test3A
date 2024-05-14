@@ -42,6 +42,7 @@ def test_increment(input, expected):
 <p>"@pytest.mark.timeout(seconds=N)" Bir testin en fazla N saniye içinde tamamlanmasını sağlar.</p>
 
 ```
+
 import pytest
 
 @pytest.mark.timeout(seconds=5)
@@ -51,9 +52,11 @@ def test_long_running_operation():
 
 ```
 
-    3.a. ***`real` Timeout:*** Bu, bir testin gerçek dünya zamanına göre ne kadar sürede tamamlanması gerektiğini belirtir. Yani, testin başlatılması ve sonlandırılması arasındaki toplam geçen zamanı ölçer.
+
+3.a. ***real Timeout:*** Bu, bir testin gerçek dünya zamanına göre ne kadar sürede tamamlanması gerektiğini belirtir. Yani, testin başlatılması ve sonlandırılması arasındaki toplam geçen zamanı ölçer.
 
     ```
+    
     import pytest
 
     @pytest.mark.timeout(seconds=5)
@@ -64,10 +67,11 @@ def test_long_running_operation():
 
     ```
 
-    3.b.***`cpu` Timeout***: Bu, bir testin işlemci zamanına (CPU zamanına) göre ne kadar sürede tamamlanması gerektiğini belirtir. Yani, testin gerçek zamanı değil, işlemci tarafından kullanılan zamanı ölçer.
+3.b.***cpu Timeout***: Bu, bir testin işlemci zamanına (CPU zamanına) göre ne kadar sürede tamamlanması gerektiğini belirtir. Yani, testin gerçek zamanı değil, işlemci tarafından kullanılan zamanı ölçer.
 
 
     ```
+    
     import pytest
 
     @pytest.mark.timeout(seconds=5, method="cpu")
